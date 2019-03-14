@@ -28,6 +28,7 @@ void shminit() {
   release(&(shm_table.lock));
 }
 
+// CS 153 - Lab 4: addition of all code
 int shm_open(int id, char **pointer) {
   uint size = myproc()->sz;
   int i;
@@ -78,7 +79,7 @@ int shm_open(int id, char **pointer) {
   return -1; //added to remove compiler warning -- you should decide what to return
 }
 
-
+// CS 153 - Lab 4: addition of all code
 int shm_close(int id) {
   if(id <= 0){
     return -1;
